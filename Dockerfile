@@ -3,7 +3,7 @@ FROM buildpack-deps:stretch-curl
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends iputils-ping snmp procps lm-sensors && \
     rm -rf /var/lib/apt/lists/*
-
+    
 RUN set -ex && \
     for key in \
         05CE15085FC09D18E99EFB22684A14CF2582E0C5 ; \
